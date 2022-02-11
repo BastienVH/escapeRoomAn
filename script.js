@@ -6,13 +6,20 @@ bubbles.forEach(bubble => {
 const birds = document.querySelectorAll("div.bird-with-text");
 console.table(birds);
 birds.forEach(bird => {
-  bird.addEventListener('click', toggleVisibility)
+  bird.addEventListener('click', checkClickedBird)
 })
 
-function toggleVisibility() {
-  if (bubbles[0].style.visibility === "hidden") {
-    bubbles[0].style.visibility = "visible";
+function checkClickedBird(e) {
+  console.log(e.target.id);
+  let number = e.target.id;
+  toggleVisibility(number)
+}
+
+function toggleVisibility(num) {
+  // let speechBubble = bubbles[].style.
+  if (bubbles[num-1].style.visibility === "hidden") {
+    bubbles[num-1].style.visibility = "visible";
   } else {
-    bubbles[0].style.visibility = "hidden";
+    bubbles[num-1].style.visibility = "hidden";
   }
 }

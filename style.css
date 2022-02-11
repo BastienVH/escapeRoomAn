@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr, 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  align-items: center;
+}
+
+.element {
+  display: grid;
+  width: 128px;
+  height: 128px;
+}
+
+.el-img, .el-txt {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.el-txt {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.el-txt > p {
+  place-self: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  width: 30px;
+  background-color: darkgrey;
+  border-radius: 50%;
+}

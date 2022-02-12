@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+}
+
+.cell {
+  margin: 16px;
+  padding: 16px;
+}

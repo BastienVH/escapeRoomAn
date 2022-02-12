@@ -23,7 +23,23 @@ container.addEventListener('click', function() {
   }
 })
 
-// function checkSolution, to run when clicking submit button:
-// - make array with active cells
-// - compare array with correct cells
-// if they are identical: prompt "You win!"
+const btnSubmit = document.getElementById("submit");
+btnSubmit.addEventListener('click', checkSolution);
+
+function checkSolution() {
+  correctNumbers = ["4", '8', '15', '16', '22'];
+  // - make array for chosen numbers
+  let submittedNumbers = [];
+  //store all activev cells in submittedNumbers array
+  const activeCells = document.querySelectorAll('div.active');
+  activeCells.forEach(cell => {
+    submittedNumbers.push(cell.textContent);
+  })
+  // - compare array with correct cells
+  let isEqual = submittedNumbers.length === correctNumbers.length &&
+    submittedNumbers.every((value, index) => value === correctNumbers[index]);
+  console.log(isEqual);
+  // if they are identical: prompt "You win!"
+  if (isEqual) alert('Correct!');
+  if (!isEqual) alert('Wrong!');
+}

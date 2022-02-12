@@ -23,4 +23,4 @@ container.addEventListener('click', function() {
   target.classList.add('active');
 })
 
-// if 5 specific cells have class active: promt "You win!"
+// if 5 specific cells have class active: prompt "You win!"

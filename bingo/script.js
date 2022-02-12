@@ -8,19 +8,19 @@ function drawGrid() {
   for (let number = 1; number <= 25; number++) {
     cell = document.createElement("div");
     cell.classList.add("cell");
-    // make each cell background black
-    cell.style.backgroundColor = "black";
-    cell.style.color = "white";
     // fill grid with numbers 1 - 25
     cell.textContent = number;
     container.appendChild(cell);
   }
 }
-// on cell click: make background blue by adding active class
+// on cell click: toggle class active
 container.addEventListener('click', function() {
   let target = event.target.closest('div.cell');
-  target.style.backgroundColor = "darkblue";
-  target.classList.add('active');
+  if (target.classList.contains("active")) {
+    target.classList.remove('active');
+  } else {
+    target.classList.add('active');
+  }
 })
 
 // if 5 specific cells have class active: prompt "You win!"

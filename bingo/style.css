@@ -5,7 +5,16 @@
   text-align: center;
 }
 
+
+
 .cell {
   margin: 16px;
   padding: 16px;
+  background-color: black;
+  color: white;
+}
+
+.active {
+  background-color: darkblue;
+  color: yellow;
 }

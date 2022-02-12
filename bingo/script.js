@@ -23,4 +23,7 @@ container.addEventListener('click', function() {
   }
 })
 
-// if 5 specific cells have class active: prompt "You win!"
+// function checkSolution, to run when clicking submit button:
+// - make array with active cells
+// - compare array with correct cells
+// if they are identical: prompt "You win!"

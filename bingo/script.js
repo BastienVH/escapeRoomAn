@@ -27,7 +27,7 @@ const btnSubmit = document.getElementById("submit");
 btnSubmit.addEventListener('click', checkSolution);
 
 function checkSolution() {
-  correctNumbers = ["4", '8', '15', '16', '22'];
+  correctNumbers = ['1', '2', '3', '16', '24'];
   // - make array for chosen numbers
   let submittedNumbers = [];
   //store all activev cells in submittedNumbers array

@@ -40,6 +40,6 @@ function checkSolution() {
     submittedNumbers.every((value, index) => value === correctNumbers[index]);
   console.log(isEqual);
   // if they are identical: prompt "You win!"
-  if (isEqual) alert('Correct!');
-  if (!isEqual) alert('Wrong!');
+  if (isEqual) alert('.mo drob teh iaarD\n.po suber ed soL');
+  if (!isEqual) alert('Fout!');
 }

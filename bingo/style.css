@@ -13,6 +13,7 @@ body {
   grid-template-rows: repeat(5, 1fr);
   justify-content: center;
   align-content: center;
+  gap: 20px;
 }
 
 .cell {
@@ -36,6 +37,7 @@ body {
 }
 
 .button {
+  margin-top: 26px;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;

@@ -1,21 +1,23 @@
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr, 1fr;
+  grid-template-rows: auto, auto;
   grid-column-gap: 25px;
   grid-row-gap: 25px;
-  align-items: center;
+  align-items: end;
 }
 
 .element {
   display: grid;
-  width: 128px;
-  height: 128px;
 }
 
 .bird-with-text {
   display: grid;
   max-width: 128px;
+}
+
+.strike {
+  text-decoration: line-through;
 }
 
 .el-img, .el-txt {
@@ -31,37 +33,37 @@
 
 .el-txt > p {
   place-self: center;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
   color: black;
   width: 30px;
-  background-color: darkgrey;
+  background-color: #9e5d5a;
   border-radius: 50%;
+  padding: 6px;
 }
 
-.bubble {
+/* (A) SPEECH BOX */
+.speech {
+  /* (A1) FONT */
+  font-family: arial, sans-serif;
+  font-size: 1.1em;
+  color: #fff;
+  /* (A2) DIMENSIONS + BACKGROUND */
   position: relative;
-  background: #000000;
-  color: #FFFFFF;
-  font-family: Arial;
-  font-size: 20px;
-  line-height: 50px;
-  text-align: center;
-  width: 226px;
-  height: 54px;
+  background: #a53d38;
+  padding: 20px;
   border-radius: 10px;
-  padding: 0px;
+  width: 180px;
+  text-align: center;
 }
-.bubble:after {
-  content: '';
+
+/* (B) ADD SPEECH "CALLOUT TAIL" */
+/* (B1) ATTACH TRANSPARENT BORDERS AFTER */
+.speech::after {
   position: absolute;
-  display: block;
-  width: 0;
-  z-index: 1;
-  border-style: solid;
-  border-width: 20px 20px 0 0;
-  border-color: #000000 transparent transparent transparent;
+  content: '';
+  border: 20px solid transparent;
+  border-left-color: #a53d38;
   bottom: -20px;
-  left: 50%;
-  margin-left: -10px;
+  left: 55%;
 }

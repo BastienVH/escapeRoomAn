@@ -1,4 +1,4 @@
-const bubbles = document.querySelectorAll(".bubble");
+const bubbles = document.querySelectorAll(".speech");
 bubbles.forEach(bubble => {
   bubble.style.visibility = "hidden";  
 });

@@ -3,7 +3,7 @@ bubbles.forEach(bubble => {
   bubble.style.visibility = "hidden";  
 });
 
-const birds = document.querySelectorAll("div.bird-with-text");
+const birds = document.querySelectorAll(".el-img");
 console.table(birds);
 birds.forEach(bird => {
   bird.addEventListener('click', checkClickedBird)
